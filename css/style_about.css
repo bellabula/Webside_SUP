@@ -2,11 +2,8 @@
 
 #pagehead {
     background-image: url(../img/About/1007601999.png);
-    background-position: 0 55%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
     height: 600px;
+    background-position: 0 55%;
 }
 
 @media (max-width: 1200px) {
