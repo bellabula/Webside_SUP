@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "Virgo 01";
+    src: url("../font/Virgo-01/virgo.ttf");
+}
+@font-face {
+    font-family: "Vanilla";
+    src: url("../font/Vanilla/Vanilla.ttf");
+}
+
+:root {
+    --messenger-color :brightness(0) saturate(100%) invert(58%) sepia(78%) saturate(3909%) hue-rotate(169deg) brightness(105%) contrast(104%);
+    --fb-color: brightness(0) saturate(100%) invert(31%) sepia(15%) saturate(2334%) hue-rotate(183deg) brightness(97%) contrast(85%);
+    --line-color: brightness(0) saturate(100%) invert(74%) sepia(11%) saturate(7476%) hue-rotate(69deg) brightness(88%) contrast(89%);
+}
+
+nav {
+    font-weight: bolder;
+    /* height: 60px; */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0;
+}
+
+/* nav.scrolled {
+    background-color: rgba(255, 255, 255, 0.3);
+} */
+
+nav ul li {
+    display: inline-block;
+    margin: 5px 0 5px 0;
+    border-radius: 5px;
+    /* line-height: 30px; */
+    padding: 0 5px 0 5px;
+}
+
+nav li a {
+    color: black;
+    text-align: center;
+}
+
+.logo-hover:hover {
+    opacity: 0.7;
+}
+
+#contactIcon {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+#messenger, #igIcon, #fbIcon, #lineIcon {
+    margin-top: 8px;
+    width: 36px;
+}
+
+#messenger {
+    filter: var(--messenger-color);
+}
+
+#fbIcon {
+    filter: var(--fb-color);
+}
+
+#lineIcon {
+    filter: var(--line-color);
+}
+
+footer {
+    text-align: center;
+}
+
+footer img {
+    width: 30px;
+    margin-right: 5px;
+}
