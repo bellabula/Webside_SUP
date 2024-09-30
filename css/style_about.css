@@ -2,12 +2,14 @@
 
 #pagehead {
     background-image: url(../img/About/1007601999.png);
-    height: 600px;
+    height: 700px;
     background-position: 0 55%;
 }
 
 @media (max-width: 1200px) {
-
+    #pagehead {
+        height: 550px !important;
+    }
 }
 
 @media (max-width: 768px) {

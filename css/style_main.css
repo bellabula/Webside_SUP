@@ -42,5 +42,6 @@ body {
 
 #pagehead {
     background-image: url(../img/main/1385585816.jpg);
-    height: 800px;
+    height: 750px;
+    margin-top: 50px;
 }
