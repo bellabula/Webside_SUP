@@ -1,10 +1,21 @@
-document.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
-        contactIcon.style.display = "block"
-    } else {
-        contactIcon.style.display = "none"
-    }
-})
+
+const fixedIcon = () => {
+    let content = `
+            <div class="rounded-circle text-center">
+                <a href="#"><img class="icon-size mt-0" src="../img/icon/arrow-up-bold.svg" alt=""></a>
+            </div>
+    `
+    fixedGoup.innerHTML = content
+    
+    document.addEventListener('scroll', () => {
+        if (window.scrollY > 150) {
+            fixedGoup.style.display = "block"
+        } else {
+            fixedGoup.style.display = "none"
+        }
+    })
+}
+
 const navbarHTML = () => {
     let contentHTML = `
             <div class="container-fluid ms-2 me-2">
@@ -68,12 +79,12 @@ const navbarHTML = () => {
             cliffDropDown.querySelector("button").style.display = "inline-block"
             liyuDropDown.querySelector("button").style.display = "inline-block"
             roundDropDown.querySelector("button").style.display = "inline-block"
-            cliffDropDown.onmouseover = () => {cliffDropDown.lastElementChild.style.display = "none"}
-            liyuDropDown.onmouseover = () => {liyuDropDown.lastElementChild.style.display = "none"}
-            roundDropDown.onmouseover = () => {roundDropDown.lastElementChild.style.display = "none"}
-            let countCliff = 0            
+            cliffDropDown.onmouseover = () => { cliffDropDown.lastElementChild.style.display = "none" }
+            liyuDropDown.onmouseover = () => { liyuDropDown.lastElementChild.style.display = "none" }
+            roundDropDown.onmouseover = () => { roundDropDown.lastElementChild.style.display = "none" }
+            let countCliff = 0
             cliffDropDown.querySelector("button").onclick = () => {
-                
+
                 if (countCliff == 0) {
                     cliffDropDown.lastElementChild.style.display = "block"
                     countCliff += 1
@@ -82,9 +93,9 @@ const navbarHTML = () => {
                     countCliff -= 1
                 }
             }
-            let countLiyu = 0            
+            let countLiyu = 0
             liyuDropDown.querySelector("button").onclick = () => {
-                
+
                 if (countLiyu == 0) {
                     liyuDropDown.lastElementChild.style.display = "block"
                     countLiyu += 1
@@ -93,9 +104,9 @@ const navbarHTML = () => {
                     countLiyu -= 1
                 }
             }
-            let countRound = 0            
+            let countRound = 0
             roundDropDown.querySelector("button").onclick = () => {
-                
+
                 if (countRound == 0) {
                     roundDropDown.lastElementChild.style.display = "block"
                     countRound += 1
@@ -114,20 +125,20 @@ const navbarHTML = () => {
             cliffDropDown.lastElementChild.style.width = `${cliffDropDown.offsetWidth}px`
             liyuDropDown.lastElementChild.style.width = `${liyuDropDown.offsetWidth}px`
             roundDropDown.lastElementChild.style.width = `${roundDropDown.offsetWidth}px`
-            cliffDropDown.onmouseover = () => {cliffDropDown.lastElementChild.style.display = "block"}
-            cliffDropDown.onmouseleave = () => {cliffDropDown.lastElementChild.style.display = "none"}
-            liyuDropDown.onmouseover = () => {liyuDropDown.lastElementChild.style.display = "block"}
-            liyuDropDown.onmouseleave = () => {liyuDropDown.lastElementChild.style.display = "none"}
-            roundDropDown.onmouseover = () => {roundDropDown.lastElementChild.style.display = "block"}
-            roundDropDown.onmouseleave = () => {roundDropDown.lastElementChild.style.display = "none"}
+            cliffDropDown.onmouseover = () => { cliffDropDown.lastElementChild.style.display = "block" }
+            cliffDropDown.onmouseleave = () => { cliffDropDown.lastElementChild.style.display = "none" }
+            liyuDropDown.onmouseover = () => { liyuDropDown.lastElementChild.style.display = "block" }
+            liyuDropDown.onmouseleave = () => { liyuDropDown.lastElementChild.style.display = "none" }
+            roundDropDown.onmouseover = () => { roundDropDown.lastElementChild.style.display = "block" }
+            roundDropDown.onmouseleave = () => { roundDropDown.lastElementChild.style.display = "none" }
         }
     }
-    
+
     let x = window.matchMedia("(max-width: 1200px)")
-    
+
     widthDropDown(x)
-    
-    x.addEventListener("change", function() {
+
+    x.addEventListener("change", function () {
         widthDropDown(x);
     });
 }
@@ -136,9 +147,10 @@ const foot = () => {
     let contentHTML = `
             <div>
                 <div>
+                    <a href="" class="logo-hover"><img src="../img/icon/messenger_black.svg"></a>
                     <a href="" class="logo-hover"><img src="../img/icon/facebook3.svg"></a>
                     <a href="" class="logo-hover"><img src="../img/icon/instagram3.svg"></a>
-                    <a href="" class="logo-hover"><img src="../img/icon/phone3.svg"></a>
+                    <a href="" class="logo-hover"><img src="../img/icon/phone1.svg"></a>
                     <a href="" class="logo-hover"><img src="../img/icon/email.svg"></a>
                     <a href="" class="logo-hover"><img src="../img/icon/line.svg"></a>
                 </div>
@@ -151,4 +163,5 @@ const foot = () => {
 }
 
 navbarHTML()
+fixedIcon()
 foot()

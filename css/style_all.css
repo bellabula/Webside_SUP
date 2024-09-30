@@ -100,10 +100,11 @@ nav div ul li button {
     }
 }
 
-#contactIcon {
+#fixedGoup {
     position: fixed;
     right: 30px;
     bottom: 30px;
+    display: none;
 }
 
 .icon-size {
@@ -111,31 +112,24 @@ nav div ul li button {
     width: 36px;
 }
 
-#contactIcon div {
+#fixedGoup div {
     width: 50px;
     height: 50px;
     line-height: 50px;
     /* background-color: lightgray; */
 }
 
-#gotop {
-    /* color: white; */
-    /* filter: var(--white-color-filter); */
-    width: 40px;
-    /* background-color: lightgrey; */
-}
-
-#messenger {
+/* #messenger {
     filter: var(--messenger-color-filter);
-}
+} */
 
-#fbIcon {
+/* #fbIcon {
     filter: var(--fb-color-filter);
-}
+} */
 
-#lineIcon {
+/* #lineIcon {
     filter: var(--line-color-filter);
-}
+} */
 
 footer {
     text-align: center;
