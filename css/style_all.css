@@ -7,6 +7,17 @@
     src: url("../font/Vanilla/Vanilla.ttf");
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -100px;
+    padding-bottom: 100px;
+}
+
 :root {
     --messenger-color-filter: brightness(0) saturate(100%) invert(58%) sepia(78%) saturate(3909%) hue-rotate(169deg) brightness(105%) contrast(104%);
     --fb-color-filter: brightness(0) saturate(100%) invert(31%) sepia(15%) saturate(2334%) hue-rotate(183deg) brightness(97%) contrast(85%);
@@ -157,6 +168,10 @@ nav div ul li button {
     text-decoration-thickness: 5px;
 }
 
+#qalist h5:hover {
+    text-decoration-color: rgba(10, 220, 117, 0.34);
+}
+
 .focus-underline {
     text-decoration-color: rgba(10, 220, 117, 0.34) !important;
 }
@@ -196,6 +211,10 @@ nav div ul li button {
 }
 
 footer {
+    height: 100px;
+    width: 100%;
+    /* position: absolute; */
+    /* bottom: 0px; */
     text-align: center;
     background-color: aliceblue;
 }

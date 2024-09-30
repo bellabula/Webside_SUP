@@ -58,7 +58,7 @@ const navbarHTML = () => {
                                 <a class="d-block" href="">南投SUP立槳</a>
                             </div>
                         </li>
-                        <li><a class="nav-link" href="">合作夥伴</a></li>
+                        <li><a class="nav-link" href="partner.html">合作夥伴</a></li>
                         <li class="nav-link">常見Q&A</li>
                         <li><a class="nav-link" href="">聯絡我們</a></li>
                     </ul>

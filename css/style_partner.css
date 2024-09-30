@@ -1,0 +1,72 @@
+@import url(style_all.css);
+
+#pagehead {
+    background-image: url(../img/fff_h.jpg);
+    height: 600px;
+}
+
+#mainContent {
+    margin: 3rem 6rem;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h1 span {
+    font-size: 2rem;
+}
+
+.row {
+    margin: 48px;
+}
+
+.row div {
+    border: 1px solid black;
+    /* padding: 5px; */
+}
+
+.col-4 {
+    padding: 20px;
+}
+
+figure div {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+figure {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+figure:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 1200px) {
+    #mainContent {
+        margin: 2rem 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #pagehead {
+        height: 400px !important;
+    }
+    h1 {
+        font-size: 48px;
+    }
+    h1 span {
+        font-size: 20px;
+    }
+    #mainContent {
+        margin: 1rem 2rem;
+    }
+    .row {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+}
