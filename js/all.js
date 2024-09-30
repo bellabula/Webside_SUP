@@ -1,18 +1,18 @@
 const fixedIcon = () => {
     let content = `
-            <div class="rounded-circle text-center">
-                <a href="#"><img class="icon-size mt-0" src="../img/icon/arrow-up-bold.svg" alt=""></a>
-            </div>
+            <a href="#"><img class="icon-size offIcon" src="../img/icon/surfboard.svg" alt=""></a>
     `
-    fixedGoup.innerHTML = content
-    
-    document.addEventListener('scroll', () => {
-        if (window.scrollY > 150) {
-            fixedGoup.style.display = "block"
-        } else {
-            fixedGoup.style.display = "none"
-        }
-    })
+    rocket.innerHTML = content
+    rocket.onmouseover = () => {rocket.firstElementChild.firstElementChild.classList.remove("offIcon")}
+    rocket.onmouseleave = () => {rocket.firstElementChild.firstElementChild.classList.add("offIcon")}
+    document.addEventListener('scroll', () => {(window.scrollY > 150) ? rocket.classList.add("show-visible") : rocket.classList.remove("show-visible")})
+    rocket.onclick = () => {
+        rocket.style.transform = "translateY(-1000px)"
+        rocket.style.transition = "1s"
+        setTimeout(()=>{
+            rocket.style.transform = "translateY(0)"
+        }, 1500)
+    }
 }
 
 const navbarHTML = () => {

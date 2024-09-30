@@ -22,7 +22,12 @@ html, body {
     --messenger-color-filter: brightness(0) saturate(100%) invert(58%) sepia(78%) saturate(3909%) hue-rotate(169deg) brightness(105%) contrast(104%);
     --fb-color-filter: brightness(0) saturate(100%) invert(31%) sepia(15%) saturate(2334%) hue-rotate(183deg) brightness(97%) contrast(85%);
     --line-color-filter: brightness(0) saturate(100%) invert(74%) sepia(11%) saturate(7476%) hue-rotate(69deg) brightness(88%) contrast(89%);
-    --white-color-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7460%) hue-rotate(129deg) brightness(110%) contrast(112%);
+    --lightgray-color-filter: brightness(0) saturate(100%) invert(49%) sepia(82%) saturate(0%) hue-rotate(233deg) brightness(118%) contrast(110%);
+}
+
+.show-visible {
+    visibility: visible !important;
+    opacity: 1;
 }
 
 #pagehead {
@@ -191,25 +196,11 @@ nav div ul li button {
     }
 }
 
-#fixedGoup {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    display: none;
-}
-
 .icon-size {
     margin-top: 8px;
     width: 36px;
 }
-
-#fixedGoup div {
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    /* background-color: lightgray; */
-}
-
+/* footer */
 footer {
     height: 100px;
     width: 100%;
@@ -222,4 +213,20 @@ footer {
 footer img {
     width: 30px;
     margin-right: 5px;
+}
+
+/* rocket */
+#rocket {
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    visibility: hidden;
+}
+
+#rocket img {
+    transform: rotate(-45deg);
+}
+
+#rocket .offIcon {
+    filter: var(--lightgray-color-filter);
 }
