@@ -10,6 +10,18 @@
     font-family: "AlexBrush";
     src: url("../font/alex-brush/AlexBrush-Regular.ttf");
 }
+@font-face {
+    font-family: "NaikaiFont-bold";
+    src: url("../font/NaikaiFont-Bold.ttf");
+}
+@font-face {
+    font-family: "NaikaiFont";
+    src: url("../font/NaikaiFont-Regular.ttf");
+}
+@font-face {
+    font-family: "jf";
+    src: url("../font/jf-openhuninn-2.1.ttf");
+}
 
 html, body {
     width: 100%;
