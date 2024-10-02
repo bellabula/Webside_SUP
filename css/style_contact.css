@@ -14,10 +14,11 @@
     font-weight: 100;
     color: white;
 }
-#mainContent div div {
-    display: inline-block;
-    width: 45%;
+
+.row {
+    --bs-gutter-x: 0;
 }
+
 #mainContent .showOut {
     visibility: hidden;
 }
@@ -25,22 +26,30 @@
 #mainContent li {
     list-style-type: none;
 }
+
+#mainContent img {
+    width: 80%;
+}
+
 #mainContent img.icon-size {
     filter: var(--lightbrown-color-filter);
-    width: 10%;
+    width: 40px;
     margin: 10px 0;
 }
 
-#mainContent div div:nth-of-type(2) h1 {
-    font-family: "AlexBrush";
-    font-size: 70px;
-    text-decoration: underline;
-    text-underline-offset: 15px;
-
+#mainContact {
+    margin-left: 48px;
+    margin-right: 48px;
 }
 
-#mainContent div div:nth-of-type(2) {
-    padding-left: 80px;
+#mainContact h1 {
+    font-family: "AlexBrush";
+    text-decoration: underline;
+    text-underline-offset: 15px;
+}
+
+#mainContact div:nth-of-type(2) {
+    padding-left: 10px;
 }
 
 #usermail {
@@ -67,20 +76,35 @@ button {
 }
 
 #mailBox {
-    margin-bottom: 30px;
+    margin: 48px;
 }
-
-#mailBox h1 {
-    position: relative;
-    top: -180px;
-    left: 100px;
-}
-
-#mailBox h1~p {
-    position: relative;
-    top: -120px;
-}
-
+#mailBox h1 {padding-left: 15%;}
+#mailBox p {padding-top: 8%;}
 textarea {
     height: 100px;
+}
+
+@media (max-width: 768px) {
+    .home-title {
+        font-size: 50px;
+    }
+    #mainContact {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+    #mailBox {
+        margin: 24px;
+        width: 95%;
+    }
+    ul {
+        padding-left: 0;
+    }
+    #mainContact h1 {
+        text-underline-offset: 8px;
+    }
+    #mailBox div:nth-of-type(1) {
+        text-align: left;
+    }
+    #mailBox h1 {padding-left: 5px;}
+    #mailBox p {padding-top: 10px;}
 }
