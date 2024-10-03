@@ -1,3 +1,4 @@
+/* english font */
 @font-face {
     font-family: "Virgo 01";
     src: url("../font/Virgo-01/virgo.ttf");
@@ -10,6 +11,7 @@
     font-family: "AlexBrush";
     src: url("../font/alex-brush/AlexBrush-Regular.ttf");
 }
+/* chinese font */
 @font-face {
     font-family: "NaikaiFont-bold";
     src: url("../font/NaikaiFont-Bold.ttf");
@@ -21,6 +23,10 @@
 @font-face {
     font-family: "jf";
     src: url("../font/jf-openhuninn-2.1.ttf");
+}
+@font-face {
+    font-family: "Han";
+    src: url("../font/SourceHanSerifTC-VF.ttf");
 }
 
 html, body {
@@ -59,7 +65,7 @@ html, body {
     background-image: url(../img/fff_h.jpg);
     width: 100%;
     height: 600px;
-    margin-top: 50px;
+    padding-top: 50px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -120,19 +126,22 @@ nav div ul li button {
 
 #cliffDropDown,
 #liyuDropDown,
-#roundDropDown {
+#roundDropDown,
+#contactDropDown {
     position: relative;
 }
 
 #cliffDropDown div,
 #liyuDropDown div,
-#roundDropDown div {
+#roundDropDown div,
+#contactDropDown div {
     background-color: aliceblue;
 }
 
 #cliffDropDown div a,
 #liyuDropDown div a,
-#roundDropDown div a {
+#roundDropDown div a,
+#contactDropDown div a {
     margin-top: 15px;
     margin-bottom: 15px;
 }

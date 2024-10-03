@@ -31,7 +31,7 @@ const navbarHTML = () => {
                     <ul class="navbar-nav ms-auto">
                         <li><a class="nav-link" href="main.html">首頁</a></li>
                         <li><a class="nav-link" href="about.html">關於耐茁</a></li>
-                        <li><a class="nav-link" href="">最新消息</a></li>
+                        <!-- <li><a class="nav-link" href="">最新消息</a></li> -->
                         <li id="cliffDropDown">
                             <a class="nav-link" href="cliff.html">【花蓮】清水斷崖 ▾</a>
                             <button>▾</button>
@@ -60,7 +60,14 @@ const navbarHTML = () => {
                         </li>
                         <li><a class="nav-link" href="partner.html">合作夥伴</a></li>
                         <li class="nav-link">常見Q&A</li>
-                        <li><a class="nav-link" href="contact.html">聯絡我們</a></li>
+                        <li id="contactDropDown">
+                            <a class="nav-link" href="contact.html">聯絡我們 ▾</a>
+                            <button>▾</button>
+                            <div style="display: none; position:absolute">
+                                <a class="d-block" href="locate.html">據點位置</a>
+                                <a class="d-block" href="">加入耐茁</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -70,14 +77,17 @@ const navbarHTML = () => {
     function widthDropDown(x) {
         if (x.matches) { // If media query matches
             cliffDropDown.lastElementChild.style.width = "100%"
-            liyuDropDown.lastElementChild.style.width = "100%"
-            roundDropDown.lastElementChild.style.width = "100%"
             cliffDropDown.firstElementChild.innerText = "【花蓮】清水斷崖"
-            liyuDropDown.firstElementChild.innerText = "【花蓮】鯉魚潭"
-            roundDropDown.firstElementChild.innerText = "【環島】SUP 各站"
             cliffDropDown.querySelector("button").style.display = "inline-block"
+            liyuDropDown.lastElementChild.style.width = "100%"
+            liyuDropDown.firstElementChild.innerText = "【花蓮】鯉魚潭"
             liyuDropDown.querySelector("button").style.display = "inline-block"
+            roundDropDown.lastElementChild.style.width = "100%"
+            roundDropDown.firstElementChild.innerText = "【環島】SUP 各站"
             roundDropDown.querySelector("button").style.display = "inline-block"
+            contactDropDown.lastElementChild.style.width = "100%"
+            contactDropDown.firstElementChild.innerText = "聯絡我們"
+            contactDropDown.querySelector("button").style.display = "inline-block"
             let countCliff = 0
             cliffDropDown.querySelector("button").onclick = () => {
                 if (countCliff == 0) {
@@ -110,22 +120,38 @@ const navbarHTML = () => {
                     countRound -= 1
                 }
             }
+            let countContact = 0
+            contactDropDown.querySelector("button").onclick = () => {
+
+                if (countContact == 0) {
+                    contactDropDown.lastElementChild.style.display = "block"
+                    countContact += 1
+                } else {
+                    contactDropDown.lastElementChild.style.display = "none"
+                    countContact -= 1
+                }
+            }
         } else {
             cliffDropDown.firstElementChild.innerText = "【花蓮】清水斷崖 ▾"
-            liyuDropDown.firstElementChild.innerText = "【花蓮】鯉魚潭 ▾"
-            roundDropDown.firstElementChild.innerText = "【環島】SUP 各站 ▾"
             cliffDropDown.querySelector("button").style.display = "none"
-            liyuDropDown.querySelector("button").style.display = "none"
-            roundDropDown.querySelector("button").style.display = "none"
             cliffDropDown.lastElementChild.style.width = `${cliffDropDown.offsetWidth}px`
+            liyuDropDown.firstElementChild.innerText = "【花蓮】鯉魚潭 ▾"
+            liyuDropDown.querySelector("button").style.display = "none"
             liyuDropDown.lastElementChild.style.width = `${liyuDropDown.offsetWidth}px`
+            roundDropDown.firstElementChild.innerText = "【環島】SUP 各站 ▾"
+            roundDropDown.querySelector("button").style.display = "none"
             roundDropDown.lastElementChild.style.width = `${roundDropDown.offsetWidth}px`
+            contactDropDown.firstElementChild.innerText = "聯絡我們 ▾"
+            contactDropDown.querySelector("button").style.display = "none"
+            contactDropDown.lastElementChild.style.width = `${contactDropDown.offsetWidth}px`
             cliffDropDown.onmouseover = () => { cliffDropDown.lastElementChild.style.display = "block" }
             cliffDropDown.onmouseleave = () => { cliffDropDown.lastElementChild.style.display = "none" }
             liyuDropDown.onmouseover = () => { liyuDropDown.lastElementChild.style.display = "block" }
             liyuDropDown.onmouseleave = () => { liyuDropDown.lastElementChild.style.display = "none" }
             roundDropDown.onmouseover = () => { roundDropDown.lastElementChild.style.display = "block" }
             roundDropDown.onmouseleave = () => { roundDropDown.lastElementChild.style.display = "none" }
+            contactDropDown.onmouseover = () => { contactDropDown.lastElementChild.style.display = "block" }
+            contactDropDown.onmouseleave = () => { contactDropDown.lastElementChild.style.display = "none" }
         }
     }
 
@@ -158,7 +184,7 @@ const foot = () => {
 
 const qa = () => {
     const qaClick = () => {
-        let qa = document.querySelectorAll('#navbarToggle ul li')[7]
+        let qa = document.querySelectorAll('#navbarToggle ul li')[6]
         qa.onmouseover = () => {qa.style.cursor = "pointer"}
         qa.onclick = () => {qaDiv.style.display = "block"}
         

@@ -18,7 +18,9 @@ if (window.innerWidth < 768) {
 window.onresize = () => {
     if (window.innerWidth < 768) {
         document.querySelector("#mainContact h1").style.fontSize = "48px"
+        document.querySelector("#mainContact img").style.display = "none"
     } else {
         document.querySelector("#mainContact h1").style.fontSize = `${window.innerWidth*0.044}px`
+        document.querySelector("#mainContact img").style.display = "inline"
     }
 }
