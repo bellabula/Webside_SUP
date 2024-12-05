@@ -26,10 +26,12 @@ mdScreen.onchange = () => {
 
 window.onresize = () => {
     if (window.innerWidth >= 768) {
+        document.querySelectorAll("#qalist h5").forEach(ele => {ele.style.fontSize = "20px"})
         document.querySelectorAll("#toptitle p")[1].style.fontSize = `${window.innerWidth/12}px`
         document.querySelectorAll("#toptitle+div p")[0].style.fontSize = `${window.innerWidth/30}px`
         toptitle.nextElementSibling.lastElementChild.style.fontSize = `${window.innerWidth*0.0134}px`
     } else {
+        document.querySelectorAll("#qalist h5").forEach(ele => {ele.style.fontSize = "12px"})
         document.querySelectorAll("#toptitle+div p")[0].style.fontSize = `${window.innerWidth*0.063}px`
         toptitle.nextElementSibling.lastElementChild.style.fontSize = `${window.innerWidth*0.0235}px`
     }

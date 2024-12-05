@@ -283,26 +283,6 @@ const qa = () => {
                             <p>請聯繫活動方，並將依照網站內取消規定辦理。
                                 ※https://is.gd/W55QRP，請詳讀過活動相關資訊再做報名。</p>
                         </li>
-                        <li>
-                            <h5></h5>
-                            <p></p>
-                        </li>
-                        <li>
-                            <h5></h5>
-                            <p></p>
-                        </li>
-                        <li>
-                            <h5></h5>
-                            <p></p>
-                        </li>
-                        <li>
-                            <h5></h5>
-                            <p></p>
-                        </li>
-                        <li>
-                            <h5></h5>
-                            <p></p>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -317,3 +297,10 @@ navbarHTML()
 fixedIcon()
 foot()
 qa()
+
+
+if (window.innerWidth < 768) {
+    document.querySelectorAll("#qalist h5").forEach(ele => {ele.style.fontSize = "12px"})        
+} else {
+    document.querySelectorAll("#qalist h5").forEach(ele => {ele.style.fontSize = "20px"})
+}
